@@ -3124,14 +3124,14 @@
       }
     ],
     "answer": [
-      "D"
+      "B"
     ],
     "explanation": "",
     "sourceImage": "",
     "sourceFile": "Screenshot_2026-06-03-20-49-37-062_com.tencent.mm.jpg",
     "warnings": [
       "D 选项标签由位置推断",
-      "答案由蓝色勾选项推断",
+      "答案由图片正确答案文字覆盖",
       "C 选项由能力等级固定选项修正"
     ]
   },

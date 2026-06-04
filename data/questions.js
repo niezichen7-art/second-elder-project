@@ -3124,14 +3124,14 @@ window.QUESTIONS = [
       }
     ],
     "answer": [
-      "D"
+      "B"
     ],
     "explanation": "",
     "sourceImage": "",
     "sourceFile": "Screenshot_2026-06-03-20-49-37-062_com.tencent.mm.jpg",
     "warnings": [
       "D 选项标签由位置推断",
-      "答案由蓝色勾选项推断",
+      "答案由图片正确答案文字覆盖",
       "C 选项由能力等级固定选项修正"
     ]
   },
@@ -31783,7 +31783,7 @@ window.QUESTIONS = [
 ];
 window.QUESTION_BUILD_REPORT = {
   "total": 964,
-  "generatedAt": "2026-06-04T03:19:49.612Z",
+  "generatedAt": "2026-06-04T03:47:43.205Z",
   "warningCount": 498,
   "warnings": [
     {
@@ -31920,7 +31920,7 @@ window.QUESTION_BUILD_REPORT = {
     },
     {
       "id": 94,
-      "warning": "答案由蓝色勾选项推断"
+      "warning": "答案由图片正确答案文字覆盖"
     },
     {
       "id": 94,

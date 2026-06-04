@@ -1,6 +1,6 @@
 {
   "total": 964,
-  "generatedAt": "2026-06-04T03:19:49.612Z",
+  "generatedAt": "2026-06-04T03:47:43.205Z",
   "warningCount": 498,
   "warnings": [
     {
@@ -137,7 +137,7 @@
     },
     {
       "id": 94,
-      "warning": "答案由蓝色勾选项推断"
+      "warning": "答案由图片正确答案文字覆盖"
     },
     {
       "id": 94,
