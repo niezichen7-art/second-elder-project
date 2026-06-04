@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>老年人能力评估刷题</title>
+  <link rel="stylesheet" href="styles.css?v=20260604-q7fix">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>老年人能力评估</h1>
+        <p id="buildStatus" class="muted">题库加载中</p>
+      </div>
+      <div class="stat-strip" aria-label="练习统计">
+        <div>
+          <span id="answeredCount">0</span>
+          <small>已答</small>
+        </div>
+        <div>
+          <span id="accuracyRate">0%</span>
+          <small>正确率</small>
+        </div>
+        <div>
+          <span id="wrongCount">0</span>
+          <small>错题</small>
+        </div>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="题目控制">
+      <div class="segmented" role="tablist" aria-label="题目范围">
+        <button id="allTab" class="active" type="button" role="tab" aria-selected="true">全部</button>
+        <button id="wrongTab" type="button" role="tab" aria-selected="false">错题</button>
+      </div>
+      <div class="jump-control">
+        <label for="questionJump">题号</label>
+        <input id="questionJump" type="number" min="1" inputmode="numeric">
+      </div>
+      <button id="prevBtn" class="ghost" type="button">上一题</button>
+      <button id="nextBtn" class="ghost" type="button">下一题</button>
+      <button id="randomBtn" class="ghost" type="button">随机</button>
+      <button id="resetBtn" class="danger" type="button">重置</button>
+    </section>
+
+    <section id="emptyState" class="empty-state" hidden>
+      <h2>没有可显示的题目</h2>
+      <p>请先运行抽取脚本生成题库，或切回全部题目。</p>
+    </section>
+
+    <article id="questionCard" class="question-card" hidden>
+      <div class="question-meta">
+        <span id="questionType" class="type-pill">题型</span>
+        <span id="questionProgress" class="muted">0/0</span>
+        <button id="sourceBtn" class="link-button" type="button">查看原截图</button>
+      </div>
+
+      <h2 id="questionTitle" class="question-title"></h2>
+      <form id="answerForm" class="options"></form>
+
+      <div class="action-row">
+        <button id="submitBtn" class="primary" type="button">提交答案</button>
+        <button id="clearBtn" class="ghost" type="button">清除选择</button>
+      </div>
+
+      <section id="resultPanel" class="result-panel" hidden>
+        <div id="resultText" class="result-text"></div>
+        <div id="answerText" class="answer-text"></div>
+        <div id="explanationText" class="explanation-text"></div>
+        <button id="resultNextBtn" class="primary result-next" type="button">下一题</button>
+      </section>
+
+      <section id="warningPanel" class="warning-panel" hidden></section>
+    </article>
+
+    <aside class="wrong-panel">
+      <div class="panel-heading">
+        <h2>错题</h2>
+        <span id="wrongPanelCount" class="muted">0</span>
+      </div>
+      <div id="wrongList" class="wrong-list"></div>
+    </aside>
+  </main>
+
+  <dialog id="sourceDialog" class="source-dialog">
+    <div class="dialog-head">
+      <strong id="sourceTitle">原截图</strong>
+      <button id="closeSourceBtn" class="ghost" type="button">关闭</button>
+    </div>
+    <img id="sourceImage" alt="题目原截图">
+  </dialog>
+
+  <script src="data/questions.js?v=20260604-q7fix"></script>
+  <script src="app.js?v=20260604-q7fix"></script>
+</body>
+</html>
